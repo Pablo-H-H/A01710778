@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>Laboratorio 1</title>
+        <link rel="stylesheet" href="estilo.css">
+        <meta charset="UTF-8">
     </head>
 
     <body>
         <header>
-            <h1>Alckaleo
+            <h1>
+                Alckaleo
+            </h1>
         </header>
 
-        <h2>Que es Alckaleo?</h2>
+        <h2 id="diamantes">Que es Alckaleo?</h2>
         <p>Alckaleo es el nombre usado para publicar diferentes trabajos que varian desde videojuegos hasta musica, este mismo nombre se usa en Facebook, Youtube e Instagram para publicar su musica</p>
 
         <h2>Quien creo Alckaleo?</h2>
@@ -18,10 +22,161 @@
         <h2>¿Cuál es la diferencia entre Internet y la World Wide Web?</h2>
         <p>El internet es una red de computadoras que se conectan en todo el mundo mientras que la World Wide Web (web) son la coleccion de paginas que se encuentra sobre esa red de computadoras</p>
 
-        <footer>
-            <h1>Creado con el editor de codigo: <a href="https://code.visualstudio.com/"><b>Visual Studio Code</b></a>
+        <h2>¿Cuáles son las partes de un URL?</h2>
+        <p>
+            Esquema (Scheme): Indica el protocolo utilizado para acceder al recurso.<br>
+            
+            Host: Es el nombre de dominio o la dirección IP del servidor donde se encuentra el recurso.<br>
+            
+            Puerto (Port): Indica el puerto de red en el servidor al que se debe conectar el cliente para establecer la conexión.<br>
+            
+            Ruta (Path): Especifica la ubicación del recurso en el servidor.<br>
+            
+            Consulta (Query): Se utiliza para enviar parámetros al servidor.<br>
+            
+            Fragmento (Fragment): Identifica una sección específica del recurso.<br>
+            
+            Ejemplo:<br>
+            <code>esquema://host:puerto/ruta?consulta#fragmento</code>
+        </p>
 
-            <h3>Pagina creada por <a href="https://www.facebook.com/alckaleo.comp/?locale=es_LA"><b>Pablo Hazael Hurtado Mireles</b></a>
+        <h2>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</h2>
+        <p>El metodo HTTP usado deberia ser el POST, esto es debido a que el método POST envía los datos del formulario en el cuerpo de la solicitud HTTP, en lugar de adjuntarlos a la URL como hace el método GET.</p>
+
+        <h2>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h2>
+        <p> El método GET se utiliza para solicitar datos de un recurso específico en el servidor. En este caso, el navegador envía una solicitud GET al servidor web para obtener la página asociada con el URL proporcionado.</p>
+
+        <h2>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h2>
+        <p>Significa que la solicitud se procesó correctamente y que el servidor ha devuelto los datos solicitados.</p>
+
+        <h2>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</h2>
+        <p>Si, el código de respuesta HTTP 404 indica que el recurso solicitado no ha sido encontrado en el servidor. Esto puede deberse a diversas razones, como un enlace roto, una URL mal escrita, o incluso problemas en la configuración del servidor.</p>
+
+        <h2>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</h2>
+        <p>Si, el código de respuesta HTTP 500 indica un error interno del servidor, lo que significa que algo salió mal en el lado del servidor al procesar la solicitud del usuario. Este tipo de error 500 generalmente se asocia con problemas en la lógica de la aplicación</p>
+
+        <h2>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</h2>
+
+        <p>Cuando un atributo HTML está marcado como "deprecated" o "desaprobado", significa que aunque aún funciona, se considera obsoleto y se desaconseja su uso en favor de alternativas más modernas o estándares actuales.</p>
+
+        <h2>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h2>
+        <p>Algunas de las diferencias principales entre HTML 4 y HTML5 son las siguientes:<br>
+            Compatibilidad con multimedia<br>
+            Canvas y gráficos<br>
+            APIs y funcionalidades avanzadas<br>
+            Formularios mejorados<br>
+            Desaparición de elementos y atributos obsoletos<br>
+            Mejoras en el soporte para accesibilidad
+        </p>
+
+        <h2>¿Qué componentes de estructura y estilo tiene una tabla?</h2>
+        <h3>Componentes</h3>
+        <p>
+            <b>Table</b>: Es el elemento principal que define la tabla<br>
+            <b>tr</b> (table row): Define una fila dentro de la tabla<br>
+            <b>td</b> (table data): Define una celda de datos dentro de una fila<br>
+            <b>th</b> (table header): Define una celda de encabezado dentro de una fila.<br>
+            <b>thead</b> (table head): Contiene las filas que se utilizan como encabezados de la tabla.<br>
+            <b>tbody</b> (table body): Contiene las filas que representan los datos principales de la tabla.<br>
+            <b>tfoot</b> (table foot): Contiene las filas que se utilizan como pie de página de la tabla.
+        </p>
+        <h3>Estilos</h3>
+        <p>
+            <b>border</b>: Define el estilo del borde de la tabla.<br>
+            <b>border-collapse</b>: Especifica si los bordes de las celdas deben colapsar en una sola línea o separarse.<br>
+            <b>text-align</b>: Controla la alineación del texto dentro de las celdas.<br>
+            <b>background-color</b>: Define el color de fondo de las celdas.<br>
+            <b>padding</b>: Controla el espacio interno de las celdas.
+        </p>
+
+        <h2>¿Cuáles son los principales controles de una forma HTML5?</h2>
+        <h3>input (varios tipos):</h3>
+        <ul>
+            <li><b>input type="text"</b>: Campo de texto de una línea.</li>
+            <li><b>input type="password"</b>: Campo de contraseña.</li>
+            <li><b>input type="email"</b>: Campo para ingresar direcciones de correo electrónico.</li>
+            <li><b>input type="tel"</b>: Campo para ingresar números de teléfono.</li>
+            <li><b>input type="number"</b>: Campo para ingresar números.</li>
+            <li><b>input type="checkbox"</b>: Casilla de verificación.</li>
+            <li><b>input type="radio"</b>: Botón de opción.</li>
+            <li><b>input type="file"</b>: Permite a los usuarios cargar archivos desde su dispositivo.</li>
+        </ul>
+
+        <h3>textarea</h3>
+        <p>
+            Permite a los usuarios ingresar texto en varias líneas.
+        </p>
+        
+        <h3>select</h3>
+        <p>
+            Permite a los usuarios seleccionar una opción de una lista desplegable.<br>
+            Contiene uno o más elementos <b>option</b>
+        </p>
+
+        <h3>button</h3>
+        <p>
+            Se utiliza para crear un botón en el formulario.<br>
+            Puede contener texto u otros elementos HTML.
+        </p>
+
+        <h3>label</h3>
+        <p>
+            Etiqueta asociada a un control de formulario.<br>
+            Mejora la accesibilidad y facilita hacer clic en el control asociado.
+        </p>
+
+        <h3>fieldset y legend</h3>
+
+        <ul>
+            <li><b>fieldset</b>: Agrupa varios controles de formulario.</li>
+            <li><b>legend</b>: Proporciona una etiqueta descriptiva para el grupo de controles.</li>
+        </ul>
+
+        <h3>datalist</h3>
+        <p>
+            Proporciona una lista de opciones para un campo de texto, pero permite a los usuarios ingresar valores personalizados.<br>
+            Se combina comúnmente con un <b>input type="text"</b>.
+        </p>
+
+        <h3>progress</h3>
+        <p>
+            Muestra una barra de progreso para representar el estado de finalización de una tarea.
+        </p>
+
+        <h3>meter</h3>
+        <p>
+            Representa un valor dentro de un rango definido, como una escala de medición.
+        </p>
+
+        <h3>Atributos</h3>
+        <ul>
+            <li><b>required</b>: Hace que un campo sea obligatorio.</li>
+            <li><b>placeholder</b>: Proporciona un texto de ejemplo dentro de un campo.</li>
+            <li><b>pattern</b>: Define un patrón de entrada válido para campos de texto.</li>
+        </ul>
+
+        <h2>¿Qué tanto soporte HTML5 tiene el navegador de chrome?</h2>
+        <p>
+            Google Chrome tiene un buen soporte para HTML5, y es uno de los navegadores más compatibles con las características y especificaciones de HTML5
+        </p>
+
+        <h2>¿Cuál es el ciclo de vida de los sistemas de información?</h2>
+        <p>
+            El ciclo de vida de los sistemas de información y el ciclo de desarrollo de sistemas de información son dos conceptos interrelacionados pero distintos en el ámbito de la gestión y desarrollo de tecnología de la información.
+        </p>
+
+        <h2>¿Cuál es el ciclo de desarrollo de sistemas de información?</h2>
+        <p>
+            El ciclo de desarrollo de sistemas de información se refiere al proceso específico utilizado para crear un sistema de información desde la etapa de análisis y diseño hasta la implementación y mantenimiento. Este ciclo a menudo sigue un enfoque de desarrollo de software iterativo e incremental, y puede basarse en metodologías como el modelo en cascada, el modelo de desarrollo ágil, o enfoques híbridos.
+        </p>
+
+
+
+
+        <footer>
+            <h1>Creado con el editor de codigo: <a href="https://code.visualstudio.com/"><b>Visual Studio Code</b></a> </h1>
+
+            <h3>Pagina creada por <a href="https://www.facebook.com/alckaleo.comp/?locale=es_LA"><b>Pablo Hazael Hurtado Mireles</b></a> </h3> 
 
             <h3>Correo: h.h.m.pablo@gmail.com</h3>
 
