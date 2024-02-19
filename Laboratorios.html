@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Laboratorio 3</title>
+        <title>Laboratorio 4</title>
         <link rel="stylesheet" href="estilo.min.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
         <meta charset="UTF-8">
     </head>
 
     <body>
         <header>
-            <h1>Alckaleo</h1>
+            <h1 class="title">Alckaleo</h1>
         </header>
 
         <h2>Que es Alckaleo?</h2>
@@ -155,7 +156,7 @@
 
         <h2>¿Qué tanto soporte HTML5 tiene el navegador de chrome?</h2>
         <p>
-            Google Chrome tiene un buen soporte para HTML5, y es uno de los navegadores más compatibles con las características y especificaciones de HTML5
+            Google Chrome tiene un buen soporte para HTML5, y es uno de los navegadores más compatibles con las características y especificaciones de HTML5.
         </p>
 
         <h2>¿Cuál es el ciclo de vida de los sistemas de información?</h2>
@@ -180,7 +181,51 @@
         <h2>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h2>
         <p>El uso de una versión minimizada del CSS ayuda a optimizar el rendimiento del sitio web al reducir el tamaño del archivo CSS y el tiempo de procesamiento del navegador.</p>
 
+        <h2>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h2>
+        <p>
+            Java se diseñó para ser independiente de la plataforma y orientado a objetos. <br>
+            JavaScript tiene como proposito la programación del lado del cliente en el navegador.
+        </p>
 
+        <h2>¿Qué métodos tiene el objeto Date?</h2>
+        <p>
+            <b>getDate():</b><br>
+            Devuelve el día del mes (número) para la fecha representada por el objeto Date.<br>
+
+            <b>getMonth():</b><br>
+            Devuelve el mes (número) para la fecha representada por el objeto Date. El mes se devuelve como un número entre 0 (enero) y 11 (diciembre).<br>
+            
+            <b>getFullYear():</b><br>
+            Devuelve el año (como número de cuatro dígitos) para la fecha representada por el objeto Date.<br>
+
+            <b>getHours():</b><br>
+            Devuelve la hora (número) para la fecha representada por el objeto Date. La hora se devuelve en formato de 24 horas.<br>
+
+            <b>getMinutes():</b><br>
+            Devuelve los minutos (número) para la fecha representada por el objeto Date.<br>
+        </p>
+
+        <h2>¿Qué métodos tienen los arreglos?</h2>
+        <p>
+            <b>push():</b><br>
+            Agrega uno o más elementos al final del arreglo y devuelve la nueva longitud del arreglo.<br>
+            <b>pop():</b><br>
+            Elimina el último elemento del arreglo y lo devuelve. El arreglo se acorta en un elemento.<br>
+            <b>shift():</b><br>
+            Elimina el primer elemento del arreglo y lo devuelve. Los índices de los demás elementos se actualizan.<br>
+            <b>unshift():</b><br>
+            Agrega uno o más elementos al inicio del arreglo y devuelve la nueva longitud del arreglo.<br>
+            <b>splice():</b><br>
+            Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.<br>
+        </p>
+
+        <h2>¿Cómo se declara una variable con alcance local dentro de una función?</h2>
+        <p>Se recomienda utilizar <b>let</b> y <b>const</b>, ya que <b>let</b> proporciona una mejor semántica de bloque y <b>const</b> ayuda a prevenir reasignaciones accidentales.</p>
+
+        <h2>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h2>
+        <p>Las funciones pueden modificar variables globales directamente. Esto puede ser problemático si varias funciones comparten y modifican la misma variable global.</p>
+
+        <script src="lab4.js"></script>
 
         <footer>
             <h1>Creado con el editor de codigo: <a href="https://code.visualstudio.com/"><b>Visual Studio Code</b></a> </h1>
@@ -191,6 +236,7 @@
 
             <h3>Matricula: A01710778</h3>
         </footer>
-        <!-- <script src="intro.js"></script> -->
+
+        <!-- <script src="lab4.js"></script> -->
     </body>
 </html>
