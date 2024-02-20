@@ -1,12 +1,13 @@
 
-document.write("<h1>Saldas de JavaScript</h1>")
+document.write("<div class='container is-max-widescreen'>");
+document.write("<h1>Saldas de JavaScript</h1>");
 
 // 1:
 // Entrada: un número pedido con un prompt. 
 // Salida: Una tabla con los números del 1 al número dado con sus cuadrados y cubos. Utiliza document.write para producir la salida
 const numero = prompt("Ingresa un numero");
 
-document.write("<table>");
+document.write("<table class='table is-bordered is-striped is-narrow is-hoverable is-fullwidth'>");
 document.write("<tr><th>Numero</th><th>Cuadrado</th><th>Cubo</th></tr>");
 
 for (let i = 1; i <= numero; i ++){
@@ -36,7 +37,7 @@ let res = var1 + var2;
 
 let tiempoInicio = new Date().getTime();
 const res_numero = prompt("Cuanto es " + var1 + " + " + var2 + "?");
-document.write("<p> Cuanto es " + var1 + " + " + var2 + "? <br>");
+document.write("<p class='subtitle is-4'> Cuanto es " + var1 + " + " + var2 + "? <br>");
 
 let tiempoFin = new Date().getTime();
 let tiempoTotal = (tiempoFin - tiempoInicio)/1000;
@@ -124,8 +125,8 @@ let miNumerote = 1234567;
 console.log(numeroInverso(miNumerote));
 
 
-document.write("<p>6:<br> Crea una solución para un problema de tu elección (puede ser algo relacionado con tus intereses, alguna problemática que hayas identificado en algún ámbito, un problema de programación que hayas resuelto en otro lenguaje, un problema de la ACM, entre otros). El problema debe estar descrito en un documento HTML, y la solución implementada en JavaScript, utilizando al menos la creación de un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra los resultados en el documento HTML. </p>")
-document.write("<p>Este es un creador de ecuaciones basicas para estadistica, en donde se crea una lista de numeros y se entrega el promedio y la media<p>")
+document.write("<p class='subtitle is-4'>6:<br> Crea una solución para un problema de tu elección (puede ser algo relacionado con tus intereses, alguna problemática que hayas identificado en algún ámbito, un problema de programación que hayas resuelto en otro lenguaje, un problema de la ACM, entre otros). El problema debe estar descrito en un documento HTML, y la solución implementada en JavaScript, utilizando al menos la creación de un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra los resultados en el documento HTML. </p>")
+document.write("<p class='subtitle is-4'>Este es un creador de ecuaciones basicas para estadistica, en donde se crea una lista de numeros y se entrega el promedio y la media.<p class='subtitle is-4'>")
 
 function CalculadoraEstadistica() {
     this.listaNumeros = [];
@@ -178,6 +179,8 @@ calculadora.agregarElemento(2);
 calculadora.agregarElemento(3);
 calculadora.agregarElemento(1);
 
-document.write("<p>Lista de Números: " + calculadora.listaNumeros.join(", ") + "</p>");
-document.write("<p>Promedio: " + calculadora.calcularPromedio() + "</p>");
-document.write("<p>Media: " + calculadora.calcularMedia().join(", ") + "</p>");
+document.write("<p class='subtitle is-4'>Lista de Números: " + calculadora.listaNumeros.join(", ") + "</p>");
+document.write("<p class='subtitle is-4'>Promedio: " + calculadora.calcularPromedio() + "</p>");
+document.write("<p class='subtitle is-4'>Media: " + calculadora.calcularMedia().join(", ") + "</p>");
+
+document.write("</div>");
