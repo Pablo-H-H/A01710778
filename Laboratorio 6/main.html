@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Laboratorio 6</title>
+        <!-- <link rel="stylesheet" href="estilo.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+
+    <body>
+        <header>
+              <section class="hero is-primary">
+                <div class="hero-body">
+                    <p class="title">
+                        Comproba Contraseña
+                    </p>
+                    <p class="subtitle">
+                        Comprueba la fortaleza de tu contraseña y si la escribes correctamente
+                    </p>
+                  
+                    <p id="info" class="info">
+                        info
+                    </p>
+                </div>
+              </section>
+
+        </header>
+
+        <div class="container is-max-widescreen">
+            <section class="section">
+
+                <input id="contrasenia_1" class="input" type="password" name="password" placeholder="Ingresa tu contraseña">
+                <p class="cambio_font">
+                    Fuerza de la contraseña: 
+                </p>
+
+                <progress id="barrita" class="progress is-primary" value="0" max="100"></progress>
+
+                <input id="contrasenia_2" class="input" type="password" placeholder="Vuelve a ingresar tu contraseña">
+
+                <div class="buttons">
+                    <button id="boton_comprobar" class="button is-link is-light">Comprobar</button>
+                </div>
+
+                <p id="prrafo" class="subtitle is-4">
+                    
+                </p>
+                <p id="cambio_font">
+                    Cambia esta fuente moviendo el mouse
+                </p>
+                <p id = "cambiar_fuente">
+                    aqui
+                </p>
+
+                <p id="lainfo" class="lainfo_noactiva">
+                    Esta web esta creada para encontrar si tu contraseña que estas usando es adecuada para los estandares de seguridad mas actuales.<br><br>
+
+                    ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?<br>
+                    La validación es crucial para garantizar la integridad y seguridad de los datos, ya que los usuarios malintencionados pueden intentar eludir la validación <br><br>
+
+                    ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?<br>
+                    Las validaciones se pueden saltar al desactivar el uso de JavaScript en el navegador.<br><br>
+
+                    Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?<br>
+                    Porque esto mejora la experiencia del usuario, reduce la carga en el servidor y mejora la eficiencia del desarrollo. Tambien es una buena practica porque es un añadido a la validacion, por otra parte tambine debe haber una validacion por parte del servidor.
+                </p>
+
+                
+            </section>
+        </div>
+
+        <script src="lab6.js"></script>
+    </body>
+</html>
