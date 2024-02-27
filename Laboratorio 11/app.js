@@ -5,6 +5,12 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+const construcciones = [{
+    nombre: "casa", 
+    imagen: "https://i.blogs.es/7cfcd0/casas-en-minecraft/1366_2000.jpeg",
+}
+];
+
 //Middleware
 app.use((request, response, next) => {
     console.log('Middleware!');
@@ -70,13 +76,14 @@ app.get('/construir', (request, response, next) => {
 
 app.post('/construir', (request, response, next) => {
     console.log(request.body);
-
+    construcciones.push(request.body);
+    console.log(construcciones);
     response.redirect('/');
 })
 
 app.get('/',(request, response, next) => {
     console.log('Ruta "/"');
-    response.send(`
+    let html_respuesta = (`
     <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -100,10 +107,14 @@ app.get('/',(request, response, next) => {
                 </div>
             </section>
 
-        </header>
+        </header>`);
+        for (let construccion of construcciones) {
+            html_respuesta += (`
 
-        <h1 class="title">Hello World</h1>
+            <h1 class="title">${construccion.nombre}</h1>`);
+        }
 
+        html_respuesta += (`
         <div class="content has-text-centered">
             <p class="subtitle is-4">
                 <h1>Creado con el editor de codigo: <a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a> </h1>
@@ -121,6 +132,7 @@ app.get('/',(request, response, next) => {
 </body>
 </html>
     `); //Manda la respuesta
+    response.send(html_respuesta);
 });
 
 app.use((request, response, next) => {
