@@ -1,0 +1,22 @@
+{
+  "name": "lab-11",
+  "version": "1.0.0",
+  "description": "Proyecto del curso",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablo-H-H/A01710778.git"
+  },
+  "keywords": [
+    "tc2005b"
+  ],
+  "author": "Pablo Hurtado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pablo-H-H/A01710778/issues"
+  },
+  "homepage": "https://github.com/Pablo-H-H/A01710778#readme"
+}
