@@ -1,0 +1,32 @@
+{
+  "name": "laboratorio-10",
+  "version": "1.0.0",
+  "description": "Proyecto tc2005b",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablo-H-H/A01710778.git"
+  },
+  "keywords": [
+    "tc2005b"
+  ],
+  "author": "Pablo Hurtado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pablo-H-H/A01710778/issues"
+  },
+  "homepage": "https://github.com/Pablo-H-H/A01710778#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0"
+  }
+}

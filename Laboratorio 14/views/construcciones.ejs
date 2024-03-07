@@ -1,0 +1,11 @@
+<%- include('includes/head.ejs', {username: username}) %>
+
+        <% for (let construccion of construcciones) { %>
+
+            <h1 class="title"><%= construccion.nombre %></h1>;
+        <% } %>
+            
+        <% if(ultima_construcciones != ''){%>
+            <div> La ultima construccion fue <%= ultima_construcciones %>.</div>
+            <%  } %>
+<%- include('includes/foot.ejs') %> 
