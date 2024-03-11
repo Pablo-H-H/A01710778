@@ -13,13 +13,9 @@ exports.post_contruir = (request, response, next) => {
     .then(([rows, fieldData]) => {
         response.setHeader('Set-Cookie', 
             'ultima_construccion=' + request.body.nombre + '; HttpOnly');
-        response.redirect('/');
+        response.redirect('/construcciones');
     })
     .catch((error) => {console.log(error)});
-    
-
-    response.setHeader('Set-Cookie', 'ultima-construccion=' + request.body.nombre + '; HTTPOnly');
-    response.redirect('/');
 }
 
 exports.get_root = (request, response, next) => {
@@ -31,7 +27,7 @@ exports.get_root = (request, response, next) => {
         ultima_construccion = '';
     }
 
-    Construccion.fetchAll().then(([rows, fieldData]) => {
+    Construccion.fetch(request.params.construccion_id).then(([rows, fieldData]) => {
         console.log(rows);
         response.render('construcciones', {
             construcciones: rows,

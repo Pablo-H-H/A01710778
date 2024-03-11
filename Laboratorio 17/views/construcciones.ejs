@@ -1,5 +1,11 @@
 <%- include('includes/head.ejs', {username: username}) %>
 
+        <% if(construcciones.length < 1) {  %>
+            <div class="notification is-info">
+                <button class="delete"></button>
+                No existe la construccion.
+            </div>
+        <% } %>
         <% for (let construccion of construcciones) { %>
 
             <h1 class="title"><%= construccion.nombre %></h1>;
@@ -8,4 +14,5 @@
         <% if(ultima_construcciones != ''){%>
             <div> La ultima construccion fue <%= ultima_construcciones %>.</div>
             <%  } %>
+        
 <%- include('includes/foot.ejs') %> 
