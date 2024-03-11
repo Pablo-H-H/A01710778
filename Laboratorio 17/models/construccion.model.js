@@ -1,9 +1,6 @@
-const construcciones = [
-    {
-    nombre: "casa", 
-    imagen: "https://i.blogs.es/7cfcd0/casas-en-minecraft/1366_2000.jpeg",
-    }
-];
+const db = require('../util/database');
+
+
 
 module.exports = class Construccion {
 
@@ -15,15 +12,14 @@ module.exports = class Construccion {
 
     //Este método servirá para guarndar de manera persistente el nuevo objeto. 
     save() {
-        construcciones.push({
-            nombre: this.nombre,
-            imagen: this.imagen,
-        }); //Es lo mismo que construcciones.push(this)
+        return db.execute(
+            'INSERT INTO construccion (nombre, imagen, username) VALUES (?, ?, "Pablo H")',
+            [this.nombre, this.imagen]
+        );
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return construcciones;
+        return db.execute('SELECT * FROM construccion')
     }
-
 }
