@@ -12,28 +12,36 @@
         <header>
             <section class="hero is-primary">
                 <div class="hero-body">
-                <a class="title" href="/construcciones">
-                    Alckaleo
-                </a>
-                <a class="subtitle" href="/construcciones/construir">
-                    Juegos para aprender
-                </a>
-                <% if (username == '') {%>
-                <a href="/users/login" class="button is-light">
-                    Log in
-                </a>
+                    <% for (let funcion of permisos) { %>
+                        <% if (funcion.funcion == 'ver') { %>
+                        <a class="navbar-item" href="/construcciones">
+                            Construcciones
+                        </a>
+                        <% } %>
+                
+                        <% if (funcion.funcion == 'construir') { %>
+                        <a class="navbar-item" href="/construcciones/construir">
+                            Construir
+                        </a>
+                        <% } %>
+                    <% } %>
 
-                <a href="/users/signup" class="button is-light">
-                    Registrarse
-                </a>
-                <% } else { %>
-                    <span>
-                        Hola <strong><%= username %> |</strong>
-                    </span>
-                    <a href="/users/login" class="button is-light">
-                        Salir
-                    </a>
-                    <%  } %>
+
+                    <% if (username == '') { %> 
+                        <a href="/users/signup" class="button is-primary">
+                            <strong>Registrarse</strong>
+                        </a>
+                        <a href="/users/login" class="button is-light">
+                            Entrar
+                        </a>
+                    <% } else { %>
+                        <span>
+                            Hola <strong><%= username %> | </strong> 
+                        </span>
+                        <a href="/users/logout" class="button is-danger">
+                            Salir
+                        </a>
+                    <% } %>
                 </div>
             </section>
 

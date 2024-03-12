@@ -1,4 +1,7 @@
-<%- include('includes/head.ejs', {username: username}) %>
+<%- include('includes/head.ejs', {
+    username: username, 
+    permisos: permisos
+}) %>
 
         <% if(construcciones.length < 1) {  %>
             <div class="notification is-info">
@@ -11,8 +14,8 @@
             <h1 class="title"><%= construccion.nombre %></h1>;
         <% } %>
             
-        <% if(ultima_construcciones != ''){%>
-            <div> La ultima construccion fue <%= ultima_construcciones %>.</div>
-            <%  } %>
+        <% if(ultima_construccion != '') { %>
+            <div>La última construcción fue <%- ultima_construccion %>.</div>
+        <% } %>
         
 <%- include('includes/foot.ejs') %> 
