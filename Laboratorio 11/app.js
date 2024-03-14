@@ -34,12 +34,12 @@ app.get('/construir', (request, response, next) => {
             <header>
                 <section class="hero is-primary">
                     <div class="hero-body">
-                    <p class="title" href="/">
+                    <a class="title" href="/">
                         Alckaleo
-                    </p>
-                    <p class="subtitle" href="/construir">
+                    </a>
+                    <a class="subtitle" href="/construir">
                         Juegos para aprender
-                    </p>
+                    </a>
                     </div>
                 </section>
     
@@ -98,12 +98,12 @@ app.get('/',(request, response, next) => {
         <header>
             <section class="hero is-primary">
                 <div class="hero-body">
-                <p class="title" href="/">
-                    Alckaleo
-                </p>
-                <p class="subtitle" href="/construir">
-                    Juegos para aprender
-                </p>
+                    <a class="title" href="/">
+                        Alckaleo
+                    </a>
+                    <a class="subtitle" href="/construir">
+                        Juegos para aprender
+                    </a>
                 </div>
             </section>
 
@@ -111,10 +111,16 @@ app.get('/',(request, response, next) => {
         for (let construccion of construcciones) {
             html_respuesta += (`
 
-            <h1 class="title">${construccion.nombre}</h1>`);
+            <h1 class="title"> Nombre de la construccion: ${construccion.nombre}</h1>
+            <h1 class="title"> URL de la Imagen de la construccion: ${construccion.imagen}</h1>`);
         }
 
         html_respuesta += (`
+        <p class="subtitle">
+            Describe el archivo package.json.
+        </p>
+        <p> El archivo package.json es esencial en proyectos de Node.js porque centraliza la información clave del proyecto y sus dependencias. Facilita la gestión de dependencias, el despliegue y la colaboración entre desarrolladores.  </p>
+
         <div class="content has-text-centered">
             <p class="subtitle is-4">
                 <h1>Creado con el editor de codigo: <a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a> </h1>
@@ -151,12 +157,12 @@ app.use((request, response, next) => {
             <header>
                 <section class="hero is-primary">
                     <div class="hero-body">
-                    <p class="title" href="/">
-                        Alckaleo
-                    </p>
-                    <p class="subtitle" href="/construir">
-                        Juegos para aprender
-                    </p>
+                        <a class="title" href="/">
+                            Alckaleo
+                        </a>
+                        <a class="subtitle" href="/construir">
+                            Juegos para aprender
+                        </a>
                     </div>
                 </section>
     
