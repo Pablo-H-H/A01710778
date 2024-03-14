@@ -2,7 +2,8 @@
 
         <% for (let construccion of construcciones) { %>
 
-            <h1 class="title"><%= construccion.nombre %></h1>;
+            <h1 class="title"> Nombre de la construccion: <%= construccion.nombre %></h1>
+            <h1 class="title"> URL de la construccion: <%= construccion.imagen %></h1>
         <% } %>
             
         <% if(ultima_construcciones != ''){%>
