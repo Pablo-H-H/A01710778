@@ -13,7 +13,7 @@ module.exports = class Construccion {
     //Este método servirá para guarndar de manera persistente el nuevo objeto. 
     save() {
         return db.execute(
-            'INSERT INTO construccion (nombre, imagen, username) VALUES (?, ?, "Pablo H")',
+            'INSERT INTO construccion (nombre, imagen, username) VALUES (?, ?, "trucopablo")',
             [this.nombre, this.imagen]
         );
     }
