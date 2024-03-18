@@ -11,7 +11,8 @@
         <% } %>
         <% for (let construccion of construcciones) { %>
 
-            <h1 class="title"><%= construccion.nombre %></h1>;
+            <h1 class="title">Nombre: <%= construccion.nombre %></h1>
+            <h1 class="title">URL: <%= construccion.imagen %></h1>
         <% } %>
             
         <% if(ultima_construccion != '') { %>
